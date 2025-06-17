@@ -5,6 +5,7 @@ import { CommonModule } from './common/common.module';
 import { JwtModule } from '@nestjs/jwt';
 import * as dotenv from 'dotenv';
 import { AuthModule } from './auth/auth.module';
+import { PersonModule } from './person/person.module';
 dotenv.config(); // โหลดตัวแปรจากไฟล์ .env ก่อน
 
 @Module({
@@ -17,6 +18,7 @@ dotenv.config(); // โหลดตัวแปรจากไฟล์ .env ก
     }),
     // สามารถเพิ่มโมดูลอื่น ๆ ที่ต้องการได้ที่นี่
     AuthModule, // โมดูลสำหรับการจัดการการยืนยันตัวตน
+    PersonModule, // โมดูลสำหรับการจัดการข้อมูลบุคคล
   ],
 })
 export class AppModule {
